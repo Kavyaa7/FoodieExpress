@@ -1,0 +1,731 @@
+
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================
+   ROOT VARIABLES
+========================================== */
+
+:root{
+
+    --primary:#FFC107;
+    --primary-dark:#FFB300;
+
+    --background:#F8F9FA;
+
+    --white:#ffffff;
+
+    --text:#212529;
+    --text-light:#6C757D;
+
+    --border:#E9ECEF;
+
+    --success:#28A745;
+    --danger:#DC3545;
+
+    --shadow-sm:0 2px 10px rgba(0,0,0,.06);
+    --shadow-md:0 8px 25px rgba(0,0,0,.08);
+    --shadow-lg:0 15px 35px rgba(0,0,0,.12);
+
+    --radius:22px;
+    --transition:.3s;
+}
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--background);
+    color:var(--text);
+    line-height:1.6;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+button{
+    font-family:'Poppins',sans-serif;
+    cursor:pointer;
+}
+
+input,
+textarea,
+select,
+button{
+    outline:none;
+}
+
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar{
+
+    background:var(--primary);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 70px;
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:var(--shadow-sm);
+}
+
+.logo{
+
+    font-size:30px;
+    font-weight:700;
+    color:white;
+}
+
+.logo span{
+
+    color:var(--text);
+}
+
+.nav-links{
+
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.nav-links a{
+
+    color:white;
+    font-weight:500;
+    transition:var(--transition);
+}
+
+.nav-links a:hover{
+
+    color:var(--text);
+}
+
+.welcome-text{
+
+    color:white;
+    font-weight:600;
+}
+
+
+/* ==========================================
+   PAGE HEADERS
+========================================== */
+
+.page-header,
+.cart-header,
+.checkout-header{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:40px auto 25px;
+}
+
+.page-header h1,
+.cart-header h1,
+.checkout-header h1{
+
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+.page-header p,
+.cart-header p,
+.checkout-header p{
+
+    color:var(--text-light);
+}
+
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.section{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:60px auto;
+}
+
+.section-title{
+
+    text-align:center;
+    font-size:36px;
+    margin-bottom:40px;
+}
+
+.section-title span{
+
+    color:var(--primary);
+}
+
+
+/* ==========================================
+   COMMON CARDS
+========================================== */
+
+.card,
+.profile-card,
+.checkout-card,
+.summary-card,
+.order-card{
+
+    background:var(--white);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow-md);
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+.form-group{
+
+    margin-bottom:22px;
+}
+
+.form-group label{
+
+    display:block;
+    margin-bottom:8px;
+
+    font-weight:600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border:1px solid #ddd;
+
+    border-radius:14px;
+
+    background:#fafafa;
+
+    font-size:15px;
+
+    transition:var(--transition);
+}
+
+.form-group textarea{
+
+    resize:vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+
+    background:white;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(255,193,7,.2);
+}
+
+.readonly{
+
+    background:#f1f1f1;
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.btn,
+.btn-primary,
+.place-btn,
+.update-btn,
+.btn-submit{
+
+    display:inline-block;
+
+    background:var(--primary);
+
+    color:var(--text);
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:14px;
+
+    font-size:15px;
+    font-weight:600;
+
+    transition:var(--transition);
+}
+
+.btn:hover,
+.btn-primary:hover,
+.place-btn:hover,
+.update-btn:hover,
+.btn-submit:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-2px);
+}
+
+.btn-secondary,
+.cancel-btn{
+
+    display:inline-block;
+
+    background:#ececec;
+
+    color:var(--text);
+
+    padding:14px 28px;
+
+    border-radius:14px;
+
+    transition:var(--transition);
+}
+
+.btn-secondary:hover,
+.cancel-btn:hover{
+
+    background:#dcdcdc;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer{
+
+    margin-top:70px;
+
+    background:#212529;
+
+    color:white;
+
+    text-align:center;
+
+    padding:22px;
+}
+
+
+/* ==========================================
+   COMMON UTILITIES
+========================================== */
+
+.price{
+
+    color:var(--primary);
+
+    font-weight:700;
+}
+
+.text-center{
+
+    text-align:center;
+}
+
+.shadow{
+
+    box-shadow:var(--shadow-md);
+}
+
+.rounded{
+
+    border-radius:24px;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.navbar{
+
+    flex-direction:column;
+
+    gap:15px;
+
+    padding:20px;
+}
+
+.nav-links{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px;
+}
+
+.page-header h1,
+.cart-header h1,
+.checkout-header h1{
+
+    font-size:30px;
+}
+
+.btn,
+.btn-primary,
+.place-btn,
+.update-btn,
+.btn-submit{
+
+    width:100%;
+    text-align:center;
+}
+
+}
+
+
+@media(max-width:768px){
+
+    .checkout-container,
+    .order-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cart-item,
+    .cart-actions,
+    .btn-container{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .quantity{
+        justify-content:center;
+    }
+
+}
+
+
+.hero{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:50px auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+    align-items:center;
+}
+
+.hero-content h1{
+
+    font-size:54px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero-content h1 span{
+
+    color:var(--primary);
+}
+
+.hero-content p{
+
+    color:var(--text-light);
+
+    margin-bottom:35px;
+
+    font-size:17px;
+}
+
+.hero-buttons{
+
+    display:flex;
+    gap:18px;
+}
+
+.hero-image img{
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow-lg);
+}
+
+
+/* ==========================================
+   SEARCH BAR
+========================================== */
+
+.search-section{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:30px auto;
+}
+
+.search-box{
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:14px 18px;
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    box-shadow:var(--shadow-sm);
+}
+
+.search-box input{
+
+    border:none;
+
+    width:100%;
+
+    font-size:15px;
+
+    background:transparent;
+}
+
+
+/* ==========================================
+   RESTAURANT GRID
+========================================== */
+
+.restaurant-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+}
+
+.restaurant-card{
+
+    background:white;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-md);
+
+    transition:var(--transition);
+}
+
+.restaurant-card:hover{
+
+    transform:translateY(-6px);
+}
+
+.restaurant-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+}
+
+.restaurant-content{
+
+    padding:20px;
+}
+
+.restaurant-content h3{
+
+    margin-bottom:10px;
+}
+
+.restaurant-content p{
+
+    color:var(--text-light);
+
+    margin-bottom:8px;
+}
+
+.rating{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    padding:6px 14px;
+
+    background:#FFF4CC;
+
+    border-radius:30px;
+
+    font-weight:600;
+}
+
+
+/* ==========================================
+   RESTAURANT HERO
+========================================== */
+
+.restaurant-hero{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:35px auto;
+
+    background:white;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-md);
+}
+
+.restaurant-hero img{
+
+    width:100%;
+    height:320px;
+
+    object-fit:cover;
+}
+
+.restaurant-info{
+
+    padding:25px;
+}
+
+.restaurant-info h1{
+
+    margin-bottom:12px;
+}
+
+.meta{
+
+    display:flex;
+
+    gap:25px;
+
+    color:var(--text-light);
+
+    margin-bottom:10px;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.form-label {
+	font-size: 11px;
+	font-weight: 600;
+	color: var(--text-sec);
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+}
+
+.input-wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.form-input {
+	width: 100%;
+	padding: 10px 12px 10px 38px;
+	background: #F9FAFB;
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	color: var(--text-main);
+	font-family: inherit;
+	font-size: 13.5px;
+	outline: none;
+	transition: 0.15s;
+}
+
+.form-input::placeholder {
+	color: var(--text-muted);
+}
+
+.form-input:focus {
+	border-color: var(--primary);
+	background: #FFFFFF;
+}
+
+.field-error {
+	font-size: 11px;
+	color: var(--error);
+	display: none;
+	margin-top: 2px;
+}
+
+.field-error.visible {
+	display: block;
+}
+
+.form-input.has-error {
+	border-color: var(--error);
+}
+

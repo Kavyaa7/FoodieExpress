@@ -1,0 +1,58 @@
+.profile-container {
+    width: 90%;
+    max-width: 760px;
+    margin: 50px auto 70px;
+}
+
+.profile-card {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: var(--shadow-lg);
+}
+
+.profile-header {
+    margin-bottom: 34px;
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 92px;
+    height: 92px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    font-size: 36px;
+    font-weight: 800;
+    box-shadow: var(--shadow-sm);
+}
+
+.profile-header h2 {
+    font-size: 30px;
+}
+
+.btn-container {
+    display: flex;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.btn-container .update-btn,
+.btn-container .cancel-btn {
+    flex: 1;
+    text-align: center;
+}
+
+@media(max-width: 768px) {
+    .profile-card {
+        padding: 28px;
+    }
+
+    .btn-container {
+        flex-direction: column;
+    }
+}

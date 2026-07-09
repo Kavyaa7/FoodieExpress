@@ -1,0 +1,118 @@
+.page-title {
+    margin-bottom: 30px;
+}
+
+.page-title h1 {
+    margin-bottom: 8px;
+    font-size: 38px;
+}
+
+.page-title p {
+    color: var(--text-light);
+}
+
+.empty-orders,
+.order-card {
+    background: var(--white);
+    border-radius: 24px;
+    box-shadow: var(--shadow-md);
+}
+
+.empty-orders {
+    padding: 64px 30px;
+    text-align: center;
+}
+
+.empty-orders i {
+    margin-bottom: 20px;
+    color: var(--primary);
+    font-size: 60px;
+}
+
+.empty-orders h2 {
+    margin-bottom: 10px;
+}
+
+.order-card {
+    padding: 26px;
+    margin-bottom: 24px;
+    transition: var(--transition);
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.order-id {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.order-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.order-item {
+    background: #FFFDF5;
+    border: 1px solid #FFE082;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.order-item label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.order-item span {
+    font-weight: 700;
+}
+
+.status {
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.pending {
+    background: #FFF3CD;
+    color: #856404;
+}
+
+.delivered {
+    background: #D4EDDA;
+    color: #155724;
+}
+
+.cancelled {
+    background: #F8D7DA;
+    color: #721C24;
+}
+
+@media(max-width: 768px) {
+    .page-title h1 {
+        font-size: 30px;
+    }
+
+    .order-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .order-grid {
+        grid-template-columns: 1fr;
+    }
+}

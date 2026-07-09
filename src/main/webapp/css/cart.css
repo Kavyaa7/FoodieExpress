@@ -1,0 +1,140 @@
+.cart-layout {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.cart-item,
+.empty-cart,
+.summary {
+    background: var(--white);
+    border-radius: 24px;
+    box-shadow: var(--shadow-md);
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+    transition: var(--transition);
+}
+
+.cart-item:hover {
+    transform: translateY(-5px);
+}
+
+.item-details h3 {
+    margin-bottom: 6px;
+    font-size: 20px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantity form {
+    display: inline-flex;
+}
+
+.quantity button {
+    min-width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50px;
+    background: var(--primary);
+    color: var(--text);
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.quantity button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+#remove-btn {
+    width: auto;
+    padding: 0 18px;
+    border-radius: 14px;
+}
+
+.item-total {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.empty-cart {
+    padding: 70px 30px;
+    text-align: center;
+}
+
+.empty-cart i {
+    margin-bottom: 20px;
+    color: var(--primary);
+    font-size: 68px;
+}
+
+.empty-cart h2 {
+    margin-bottom: 10px;
+}
+
+.empty-cart p {
+    margin-bottom: 28px;
+}
+
+.summary {
+    padding: 28px;
+}
+
+.summary h2 {
+    margin-bottom: 18px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 17px;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.cart-actions a,
+.cart-actions .btn {
+    display: inline-flex;
+}
+
+@media(max-width: 768px) {
+    .cart-item {
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+    }
+
+    .quantity {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .cart-actions {
+        flex-direction: column;
+    }
+
+    .cart-actions a,
+    .cart-actions .btn {
+        width: 100%;
+    }
+}
