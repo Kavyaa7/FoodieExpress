@@ -6,9 +6,13 @@ import java.sql.SQLException;
 
 public class DBConnection {
 	
-	private static final String URL = "jdbc:mysql://localhost:3306/food_delivery";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "Kavya@29";
+	private static String HOST = System.getenv("DB_HOST");
+	private static String PORT = System.getenv("DB_PORT");
+	private static String DB   = System.getenv("DB_NAME");
+	private static String USER = System.getenv("DB_USER");
+	private static String PASS = System.getenv("DB_PASS");
+	private static String URL  = "jdbc:mysql://" + HOST + ":" + PORT + "/" + DB + "?useSSL=true&requireSSL=true";
+	
     private static Connection con;
     
     public static Connection getConnection(){
@@ -19,7 +23,7 @@ public class DBConnection {
 
             //System.out.println("MySQL Driver Loaded Successfully");
             
-            con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+            con = DriverManager.getConnection(URL, USER, PASS);
             
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

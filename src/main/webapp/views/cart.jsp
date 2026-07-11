@@ -262,7 +262,7 @@ body {
 		<ul class="nav-links">
 			<li><a href="<%=request.getContextPath()%>/home.jsp">Home</a></li>
 			<li><a href="orderHistory.jsp">Orders</a></li>
-			<li><a href="#">Profile</a></li>
+			<li><a href="profile.jsp">Profile</a></li>
 		</ul>
 
 	</nav>

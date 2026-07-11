@@ -208,7 +208,7 @@ body {
 		<div class="logo">🍔 FoodieExpress</div>
 
 		<ul class="nav-links">
-			<li><a href="home.jsp">Home</a></li>
+			<li><a href="<%=request.getContextPath()%>/home.jsp">Home</a></li>
 			<li><a href="orderHistory.jsp">Orders</a></li>
 			<li><a href="cart.jsp">Cart</a></li>
 		</ul>

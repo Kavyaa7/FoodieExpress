@@ -27,6 +27,6 @@ public class AcceptOrderServlet extends HttpServlet{
 			orderDAOImpl.updateOrderStatus(orderId,"out_for_delivery");
 		}
 			
-		resp.sendRedirect(req.getContextPath() + "/deliveryDashboard.jsp");
+		resp.sendRedirect(req.getContextPath() + "/views/deliveryDashboard.jsp");
 	}
 }
